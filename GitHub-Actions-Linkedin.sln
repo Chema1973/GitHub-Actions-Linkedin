@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WisdomPetMedicine.Api", "WisdomPetMedicine.Api\WisdomPetMedicine.Api.csproj", "{DB2143D0-5288-9E4C-24E1-6CA22224CFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WisdomPetMedicine.Tests", "WisdomPetMedicine.Tests\WisdomPetMedicine.Tests.csproj", "{05BA7B8E-0A6B-D841-9862-6C7EE8C6AAE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB2143D0-5288-9E4C-24E1-6CA22224CFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2143D0-5288-9E4C-24E1-6CA22224CFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2143D0-5288-9E4C-24E1-6CA22224CFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2143D0-5288-9E4C-24E1-6CA22224CFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05BA7B8E-0A6B-D841-9862-6C7EE8C6AAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05BA7B8E-0A6B-D841-9862-6C7EE8C6AAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05BA7B8E-0A6B-D841-9862-6C7EE8C6AAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05BA7B8E-0A6B-D841-9862-6C7EE8C6AAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00E193C5-1FEA-4372-BF38-CE655F6771B2}
+	EndGlobalSection
+EndGlobal
