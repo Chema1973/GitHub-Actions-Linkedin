@@ -18,13 +18,13 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore WisdomPetMedicine.sln
+      run: dotnet restore GitHub-Actions-Linkedin.sln
     - name: Build
-      run: dotnet build WisdomPetMedicine.sln --no-restore
+      run: dotnet build GitHub-Actions-Linkedin.sln --no-restore
     - name: Test
-      run: dotnet test WisdomPetMedicine.sln --no-build --verbosity normal
+      run: dotnet test GitHub-Actions-Linkedin.sln --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish WisdomPetMedicine.sln --configuration Release --output publish
+      run: dotnet publish GitHub-Actions-Linkedin.sln --configuration Release --output publish
     - name: Subir datos
       uses: actions/upload-artifact@v4
       with:
