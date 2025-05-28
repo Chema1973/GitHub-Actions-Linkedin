@@ -1,0 +1,34 @@
+name: ghcli
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Etiqueta para la imagen de Docker
+        required: true
+        default: latest
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore GitHub-Actions-Linkedin.sln
+    - name: Build
+      run: dotnet build GitHub-Actions-Linkedin.sln --no-restore
+    - name: Test
+      run: dotnet test GitHub-Actions-Linkedin.sln --no-build --verbosity normal
+  docker:
+    name: Contenerización con Docker y .NET
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker build
+      run: docker build wpm --file wpm/WisdomPetMedicine.Api/Dockerfile --tag github-action-esencial:${{ github.event.inputs.tag }}
