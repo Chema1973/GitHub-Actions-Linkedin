@@ -39,9 +39,7 @@ jobs:
 
     - name: Crear un issue con el API REST
       if: ${{ failure() }}
-      run: |
-          gh issue create \
-            --title "No se puede autenticar con Docker Hub" \
-            --body-file "Error en el workflow **${{ github.workflow }}**." \
-            --assignee "Asignado" \
-            --label "Label"
+      uses: pozil/auto-assign-issue@v1
+      with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: andrewlock
