@@ -40,6 +40,6 @@ jobs:
     - name: Crear un issue con el API REST
       if: ${{ failure() }}
       uses: actions/failed-build-issue@v1
-        with:
+      with:
           title: "Build Failed"
           body: "Build failed on ${{ github.ref_name }} branch.  See logs for details."
