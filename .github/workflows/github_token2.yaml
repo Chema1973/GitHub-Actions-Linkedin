@@ -8,6 +8,7 @@ env:
   DOCKERFILE_PATH: wpm/WisdomPetMedicine.Api/Dockerfile
 
 jobs:
+  
   build:
     runs-on: ubuntu-latest
     steps:
@@ -25,6 +26,8 @@ jobs:
   docker:
     name: Contenerización con Docker y .NET
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     needs: [build]
     steps:
     - uses: actions/checkout@v3
@@ -38,7 +41,9 @@ jobs:
         password: PASSWORDINCORRECTO
 
     - name: Crear un issue con el API REST
+      
       if: ${{ failure() }}
+      
       run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/issues \
