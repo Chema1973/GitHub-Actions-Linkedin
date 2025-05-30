@@ -39,7 +39,9 @@ jobs:
 
     - name: Crear un issue con el API REST
       if: ${{ failure() }}
-      uses: pozil/auto-assign-issue@v1
       with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: andrewlock
+          title: "Build failed"
+          body: "The build process failed. Please investigate the logs."
+          assignees: ${{ github.actor }}
+          labels: "bug"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
