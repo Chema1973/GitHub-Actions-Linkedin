@@ -1,4 +1,4 @@
-name: GitHub Token2 yaml
+name: GitHub Token 2
 
 on:
   workflow_dispatch:
@@ -49,5 +49,3 @@ jobs:
           "body": "Error en el workflow **${{ github.workflow }}**."
           }' \
         --fail
-		
-          
