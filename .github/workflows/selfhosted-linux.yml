@@ -2,7 +2,7 @@
 # Para evitar fallos, Docker Desktop tenía que estar abierto:
 # ERROR: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
 
-# Ha creado la imagen en Docker Desktop de "github-action-esencial - runner - d6dde0a3a1e4 - 11 minutes ago - 328.67 MB"
+# Ha creado la imagen en Docker Desktop de "github-action-esencial-linux - runner - 271bae9f11c3 - 3 minutes ago - 328.67 MB"
 
 name: Runners hospedados - Linux - Docker
 
