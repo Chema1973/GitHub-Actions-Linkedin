@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\holamundo.yml = .github\workflows\holamundo.yml
 		.github\workflows\matriz-dotnet.yml = .github\workflows\matriz-dotnet.yml
 		.github\workflows\secretos.yml = .github\workflows\secretos.yml
+		.github\workflows\selfhosted.yaml = .github\workflows\selfhosted.yaml
 		.github\workflows\variables-ambiente-predeterminadas.yml = .github\workflows\variables-ambiente-predeterminadas.yml
 		.github\workflows\variables.yml = .github\workflows\variables.yml
 	EndProjectSection
