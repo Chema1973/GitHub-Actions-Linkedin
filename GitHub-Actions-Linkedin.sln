@@ -28,6 +28,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{CDDAF525-9894-41F9-9A88-AB5EAFCCA2A9}"
 	ProjectSection(SolutionItems) = preProject
 		actions\action.yaml = actions\action.yaml
+		actions\Dockerfile = actions\Dockerfile
+		actions\entrypoint.sh = actions\entrypoint.sh
 	EndProjectSection
 EndProject
 Global
