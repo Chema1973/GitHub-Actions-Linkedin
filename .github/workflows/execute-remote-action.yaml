@@ -7,4 +7,9 @@ jobs:
   execute_workflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./../src/GitHub-Actions-Linkedin/actions/action.yaml  # Ruta al flujo de trabajo
+      - name: Ejecutar yaml remoto
+        run: |
+               # La ruta del archivo YAML, asegúrate de que sea la ruta correcta
+               #  `../../mi-archivo-yaml.sh` si el archivo YAML está en el directorio raíz de 
+               #  tu repositorio y no dentro de la carpeta `.github/workflows`
+               bash ../../actions/action.yaml'
