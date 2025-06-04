@@ -1,15 +1,18 @@
 name: Execute Remote Workflow
-
 on:
-  workflow_dispatch:  # Para ejecutar manualmente
+  workflow_dispatch:
 
 jobs:
-  execute_workflow:
+  test_actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Ejecutar yaml remoto
-        run: |
-               # La ruta del archivo YAML, asegúrate de que sea la ruta correcta
-               #  `../../mi-archivo-yaml.sh` si el archivo YAML está en el directorio raíz de 
-               #  tu repositorio y no dentro de la carpeta `.github/workflows`
-               bash ../../actions/action.yaml'
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Nombres de personajes
+        uses: ./actions
+        id: personajes
+        with:
+          person_id: ${{ github.run_number }}
+      - name: Regresa el personaje
+        run: echo "${{ steps.personajes.outputs.person_name }}"
