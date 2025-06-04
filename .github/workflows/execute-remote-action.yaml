@@ -7,4 +7,4 @@ jobs:
   execute_workflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: './actions/action.yaml'  # Ruta al flujo de trabajo
+      - uses: './GitHub-Actions-Linkedin/actions/action.yaml'  # Ruta al flujo de trabajo
